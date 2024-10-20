@@ -125,7 +125,7 @@ I like the *ocamldoc* style. I`ll stick to this kind of comments
        Raises: [Invalid_argument "bound"] otherwise. *)
 #+end_src
 
-To create the documentation, once *odoc* is installed (~opam install odoc~)
+To create the documentation, once *odoc* is installed [fn:1]
 in the root folder:
 #+begin_src shell
   cd arrowhead
@@ -133,3 +133,12 @@ in the root folder:
 #+end_src
 
 you can now ~open arrowhead/_build/default/_doc/_html/index.html~
+
+*** TODO Searchable doc using sherlodoc
+$ opam install sherlodoc
+** TODO Running tests
+https://dune.readthedocs.io/en/stable/tests.html
+
+* Footnotes
+
+[fn:1] ~opam install odoc~
