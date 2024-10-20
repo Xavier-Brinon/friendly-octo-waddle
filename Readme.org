@@ -115,3 +115,21 @@ To format the project as a whole:
 #+end_src
 
 #+RESULTS:
+
+** Documenting
+I like the *ocamldoc* style. I`ll stick to this kind of comments
+#+begin_src ocaml
+   (** [random_int bound] is a random integer between 0 (inclusive)
+       and [bound] (exclusive).
+       Requires: [bound] is greater than 0 and less than 2^30.
+       Raises: [Invalid_argument "bound"] otherwise. *)
+#+end_src
+
+To create the documentation, once *odoc* is installed (~opam install odoc~)
+in the root folder:
+#+begin_src shell
+  cd arrowhead
+  dune build @doc
+#+end_src
+
+you can now ~open arrowhead/_build/default/_doc/_html/index.html~
