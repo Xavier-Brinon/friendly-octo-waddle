@@ -1,0 +1,8 @@
+# Exercism cli
+cli/
+
+# Emacs temp
+*~
+
+# Ocaml and Dune artifact
+_build/

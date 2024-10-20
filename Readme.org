@@ -1,0 +1,76 @@
+#+title: Exercism track
+#+author: Xavier Brinon <xavier@brinon.eu>
+#+date: [2024-10-20 Sun]
+#+startup: indent
+#+property: header-args :results output
+#+link exercism https://exercism.org/dashboard
+#+link opam https://opam.ocaml.org/
+#+link docs https://ocaml.org/docs/your-first-program
+* Creating a Project
+This is something I'll do a lot, better do it properly.
+Let's suppose I'm building a project called *Arrowhead*.
+** Using *Dune*
+Following the [[https://dune.readthedocs.io/en/stable/quick-start.html][Dune Quickstart]]
+*** Init
+#+name: 01 Init dune project
+#+begin_src shell
+  dune init proj arrowhead
+#+end_src
+
+#+RESULTS: 01 Init dune project
+
+*** Folder Structure
+This creates a folder called ~arrowhead~ with the following structure
+#+name: 02 Arrowhead folder structure
+#+begin_src shell
+  cd arrowhead
+  tree .
+#+end_src
+
+#+RESULTS: 02 Arrowhead folder structure
+#+begin_example
+.
+├── arrowhead.opam
+├── bin
+│   ├── dune
+│   └── main.ml
+├── _build
+│   └── log
+├── dune-project
+├── lib
+│   └── dune
+└── test
+    ├── dune
+    └── test_arrowhead.ml
+
+5 directories, 8 files
+#+end_example
+
+*** Build and Test Project
+Build the project with
+#+name: 03 build arrowhead
+#+begin_src shell
+  cd arrowhead
+  dune build
+#+end_src
+
+#+RESULTS: 03 build arrowhead
+
+To run the test
+#+name: 04 test arrowhead
+#+begin_src shell
+  cd arrowhead
+  dune test
+#+end_src
+
+#+RESULTS: 04 test arrowhead
+
+And run the program
+#+name: 05 run arrowhead
+#+begin_src shell
+  cd arrowhead
+  dune exec arrowhead
+#+end_src
+
+#+RESULTS: 05 run arrowhead
+: Hello, World!
