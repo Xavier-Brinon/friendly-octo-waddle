@@ -125,7 +125,7 @@ I like the *ocamldoc* style. I`ll stick to this kind of comments
        Raises: [Invalid_argument "bound"] otherwise. *)
 #+end_src
 
-To create the documentation, once *odoc* is installed [fn:1]
+To create the documentation, once *odoc* is installed [fn:1],
 in the root folder:
 #+begin_src shell
   cd arrowhead
@@ -134,8 +134,12 @@ in the root folder:
 
 you can now ~open arrowhead/_build/default/_doc/_html/index.html~
 
-*** TODO Searchable doc using sherlodoc
-$ opam install sherlodoc
+Search bar in the documentation is done by installing *Sherlodoc*
+#+begin_src shell
+  opam install sherlodoc
+#+end_src
+The bar will appear after the next ~dune build @doc~
+
 ** TODO Running tests
 https://dune.readthedocs.io/en/stable/tests.html
 
